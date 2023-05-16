@@ -1,0 +1,322 @@
+@charset "uft-8";
+
+/*base*/
+body					{ min-width:1280px; word-break: break-all; padding-top:100px;}
+*						{ padding:0; margin:0; vertical-align:top; font-family: 'Noto Sans KR', sans-serif; font-size:14px; font-weight:300; color:#222; outline:none; }
+img						{ border:0; vertical-align:middle; }
+.img  {width: 300px; height: 300px; background: blue;}
+a						{ text-decoration:none; display:inline-block; }
+/* a:hover, a:focus		{ text-decoration:underline; } */
+ul, ol, li				{ list-style-type:none; }
+button                  { cursor: pointer; }
+fieldset                { border: 0; }
+em                      { font-style: normal; }
+button:disabled         { cursor: default; }
+textarea                { resize: none; }
+img[src=""]             { display: none; }
+
+/* main  */
+.main {
+    z-index:2;
+    position:relative;
+    width:100%;
+}
+
+.secton6-inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: pink;
+}
+
+.mainBtn-wrap {
+    padding: 100px 0 50px 0;
+    text-align: center;
+}
+.mainBtn-wrap>a {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    border: 1px solid #333;
+    position: relative;
+    transition: all .35s;
+}
+
+.mainBtn-wrap>a::after {
+    z-index: -2;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e6787a;
+    transition: all .35s;
+}
+.secton4-inner .mainBtn-wrap>a::after, .secton8-inner .mainBtn-wrap>a::after {
+    z-index: -2;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #56C0E8;
+    transition: all .35s;
+}
+  
+.mainBtn-wrap>a:hover,.mainBtn-wrap>a.click {
+    color: #fff;
+    font-weight: 500;
+}
+.mainBtn-wrap>a:hover:after,.mainBtn-wrap>a.click:after {
+    width: 100%;
+}
+
+.content-title {
+    text-align: center;
+  }
+  .section10-inner .content-title, .secton12-inner .content-title {
+    padding-top: 100px;
+  }
+  .content-title>h1 {
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .content-title>h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 1px;
+    height: 50px;
+    display: block;
+    background-color: red;
+  }
+  .secton12-inner .content-title>h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 1px;
+    height: 50px;
+    display: block;
+    background-color: #5BC2CB;
+  }
+  .section10-inner .content-title>h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 1px;
+    height: 50px;
+    display: block;
+    background-color: #B0E35A;
+  }
+  
+  .secton4-inner .content-title>h1::after , .secton8-inner .content-title>h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 1px;
+    height: 50px;
+    display: block;
+    background-color: #56C0E8;
+  }
+  
+  .tabs_wrap>ul {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tabs_wrap>ul>li {
+    width: 135px;
+    text-align: center;
+    background: #e9ecf1;
+    border-right: 1px solid #c1c4c9;
+    padding: 13px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .tabs_wrap>ul>li:first-child {
+    border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  }
+  .tabs_wrap>ul>li:last-child{
+  border-right: 0px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  }
+  .tabs_wrap>ul>li:hover,
+  .tabs_wrap>ul>li.active {
+    background: red;
+    color: #fff;
+  }
+  
+  .secton4-inner .tabs_wrap>ul>li:hover,
+  .secton4-inner .tabs_wrap>ul>li.active,
+  .secton8-inner .tabs_wrap>ul>li:hover,
+  .secton8-inner .tabs_wrap>ul>li.active {
+    background: #56C0E8;
+    color: #fff;
+  }
+  
+  .content_wrap {
+    width: 100%;
+    height:110vh;
+    max-width: 900px;
+    margin: 0 auto -200px;
+  }
+  .content_wrap {
+    width: 100%;
+    height:110vh;
+    max-width: 1000px;
+    margin: 0 auto -200px;
+  }
+  
+  
+  .content_wrap .item_wrap {
+    display: none;
+  }
+  .content_wrap .item_wrap.active {
+    display: block;
+  }
+  
+  .content_wrap .item .item_left {
+    float: left;
+    width: auto;
+    height: 728px;
+  }
+  
+  .content_wrap .item .item_right {
+    float: left;
+    width: 500px;
+    text-align: left;
+    padding-left: 100px;
+  }
+  #g_knit .item .item_right {
+    float: right;
+    width: 481px;
+    text-align: left;
+    padding-left: 0;
+  }
+  #S_GymSuit .item .item_right {
+    float: right;
+    width: 481px;
+    text-align: left;
+    padding-left: 0;
+  }
+  .section10-inner .item .item_right {
+    float: right;
+    width: 481px;
+    text-align: left;
+    padding-left: 0;
+  }
+  
+  .modelTabBtn>li {
+
+    position: relative;
+    background-color: #e9ecf1;
+    padding: 5px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    color: #444444;
+    font-weight: 400;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .modelTabBtn>li.on {
+    
+    background-color: red;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .modelTabBtn>li {
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .tmodelTabBtn>li:hover,
+  .modelTabBtn>li.on {
+    background: red;
+    color: #fff;
+  }
+
+
+  .secton4-inner .modelTabBtn>li.on,
+  .secton8-inner .modelTabBtn>li.on{
+    background-color: #56C0E8;
+    color: #fff;
+    font-weight: 500;
+  }
+.detailView {
+    margin-top:50px;
+}
+.content {
+    display: none;
+}
+
+.content.on {
+    display: block;
+}
+
+.fabricImg {
+    z-index: 3;
+    position: relative;
+    width:100%;
+}
+.fabricImg::after {
+    z-index:-1;
+    content:'';
+    display:block;
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:481px;
+    height:273px;
+    background:red;
+}
+.fabricImg::after {
+    z-index:-1;
+    content:'';
+    display:block;
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:481px;
+    height:273px;
+    background:red;
+}
+#peoplegTab_9 .fabricImg::after {
+    z-index: 10;
+    content:'';
+    display:block;
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:481px;
+    height:273px;
+    background:green;
+}
+
+
+.fabricDocu>h4 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #e6787a;
+    padding: 80px 0 30px;
+}
+
